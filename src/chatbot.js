@@ -22,7 +22,7 @@ const fetch = require('node-fetch')
     if (!options.bot.age) {
       options.bot.age = '16'
     }
-    if (typeof options.bot.age !== 'string' || options.bot.age !== 'integer' || options.bot.age !== 'number') {
+    if (typeof options.bot.age !== 'string') {
       throw new TypeError('Simply-rjs Error: bot age must be a string, integer or number')
     }
     if (!options.bot.birthmonth) {
