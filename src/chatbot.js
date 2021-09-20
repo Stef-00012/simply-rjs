@@ -16,6 +16,12 @@ const fetch = require('node-fetch')
     if (options.client.constructor.name !== 'Client') {
       throw new TypeError('Simply-rjs Error:vclient parameter must be a revolt.js client')
     }
+    if (!options.unknowncharactererror) {
+      options.unknowncharactererror = 'Sorry, i didn\'t understood, could you repeat?';
+    }
+    if (typeof options.unknowncharactererror !== 'string') {
+      throw new TypeError('Simply-rjs Error: unknown character error must be a string')
+    }
     if (!options.bot) {
       options.bot = {}
     }
@@ -202,6 +208,6 @@ const fetch = require('node-fetch')
     })
     } catch (err) {
       console.log(`Simply-rjs Error: ${err.stack}`)
-      options.message.channel.sendMessage(`Error: ${err}`)
+      options.message.channel.sendMessage(`${options.unknowncharactererror}`)
     }
   }
