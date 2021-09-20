@@ -1,1 +1,3 @@
-module.exports.chatbot = require('./src/chatbot')
+module.exports. = {
+  chatbot: require('./src/chatbot')
+}
