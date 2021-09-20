@@ -163,47 +163,13 @@ const fetch = require('node-fetch')
           '\ud83d[\udc00-\ude4f]',
           '\ud83d[\ude80-\udeff]'
         ];
-        let unsupported = [
-          '★',
-          '⟨',
-          '⟩',
-          '←',
-          '↑',
-          '↓',
-          '→',
-          '¹',
-          '²',
-          '³',
-          '⁴',
-          '⁵',
-          '⁶',
-          '⁷',
-          '⁸',
-          '⁹',
-          '⁰',
-          '—',
-          '·',
-          'ª',
-          'º',
-          '•',
-          '„',
-          '“',
-          '”',
-          '«',
-          '»',
-          '∅',
-          '∞',
-          '≠',
-          '≈',
-          '›',
-          '‹',
-          ''
-        ]
         let input = options.message.content.replace(new RegExp(ranges.join('|'), 'g'), '.')
-        fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${input}&age=${options.bot.age}&birthyear=${birthyear}&birthdate=${birthdate}&birthday=${birthday}&favoriteactor=${options.bot.favorites.actor}&favoriteactress=${options.bot.favorites.actress}$favoriteartist=${options.bot.favorites.artist}&favoriteauthor=${options.bot.favorites.author}&favoriteband=${options.bot.favorites.band}&favoritebook=${options.bot.favorites.book}&favoritecolor=${options.bot.favorites.color}&favoritefood=${options.bot.favorites.food}&favoritemovie=${options.bot.favorites.movie}&favoriteopera=${options.bot.favorites.opera}&favoriteseason=${options.bot.favorites.season}&favoriteshow=${options.bot.favorites.show}&favoritesong=${options.bot.favorites.song}&favoritesport=${options.bot.favorites.sport}&favoritesubject=${options.bot.favorites.subject}&gender=${options.bot.gender}&ownername=${options.bot.ownername}&botname=${options.bot.botname}`).then(res => res.json()).then(json => {
+        try{
+          fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${input}&age=${options.bot.age}&birthyear=${birthyear}&birthdate=${birthdate}&birthday=${birthday}&favoriteactor=${options.bot.favorites.actor}&favoriteactress=${options.bot.favorites.actress}$favoriteartist=${options.bot.favorites.artist}&favoriteauthor=${options.bot.favorites.author}&favoriteband=${options.bot.favorites.band}&favoritebook=${options.bot.favorites.book}&favoritecolor=${options.bot.favorites.color}&favoritefood=${options.bot.favorites.food}&favoritemovie=${options.bot.favorites.movie}&favoriteopera=${options.bot.favorites.opera}&favoriteseason=${options.bot.favorites.season}&favoriteshow=${options.bot.favorites.show}&favoritesong=${options.bot.favorites.song}&favoritesport=${options.bot.favorites.sport}&favoritesubject=${options.bot.favorites.subject}&gender=${options.bot.gender}&ownername=${options.bot.ownername}&botname=${options.bot.botname}`).then(res => res.json()).then(async json => {
           let reply = json.message.replace('@here', '<here mention>').replace('@everyone', '<everyone mention>').replace(new RegExp('/<@([A-z0-9]{26})>/g'), '<user/role mention>')
           options.message.channel.sendMessage({ content: `${reply.toString()}` })
         })
+        }
       }
     })
     } catch (err) {
