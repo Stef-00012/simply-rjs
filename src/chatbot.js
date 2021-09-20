@@ -1,16 +1,20 @@
 module.exports = {
   async function chatbot(options = {}) {
+    const fetch = require('node-fetch')
+    if (!options.message) {
+      throw new Error('Simply-rjs Error: message is a required parameter')
+    }
+    if (!options.channels) {
+      throw new Error('Simply-rjs Error: channels is a required parameter')
+    }
+    if (!Array.isArray(options.channels)) {
+      throw new TypeError('Simply-rjs Error: channels parameter must be an array')
+    }
     if (!options.client) {
       throw new Error('Simply-rjs Error: client is a required parameter')
     }
     if (options.client.constructor.name !== 'Client') {
       throw new TypeError('Simply-rjs Error:vclient parameter must be a revolt.js client')
-    }
-    if (!options.input) {
-      throw new Error('Simply-rjs Error: input is a required parameter')
-    }
-    if (typeof options.input !== 'string') {
-      throw new TypeError('Simply-rjs Error: input parameter must be a string')
     }
     if (!options.bot) {
       options.bot = {}
@@ -35,6 +39,9 @@ module.exports = {
     }
     if (typeof options.bot.gender !== 'string') {
       throw new TypeError('Simply-rjs Error: bot gender parameter must be a string')
+    }
+    if (!options.bot,favorites) {
+      options.bot.favorites = {}
     }
     if (!options.bot.favorites.actor) {
       options.bot..favorites.actor = 'Tom Hanks';
@@ -138,5 +145,20 @@ module.exports = {
     if (typeof options.bot.botname !== 'string') {
       throw new TypeError('Simply-rjs Error: bot botname parameter must be a string')
     }
+    if (options.message.author.bot) return;
+    options.channels.forEach(channel => {
+      if (!client.channels.get(channel._id)) {
+        throw new TypeError('Simply-rjs Error: one of the given channel ids is not valid')
+      }
+      if (options.channels.includes(options.message.channel._id)) {
+        var ranges = [
+          '\ud83c[\udf00-\udfff]',
+          '\ud83d[\udc00-\ude4f]',
+          '\ud83d[\ude80-\udeff]'
+        ];
+        let input = options.message.content.replace(new RegExp(ranges.join('|'), 'g'), '.')
+        fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${input}&age=${options.bot.age}&`)
+      }
+    })
   }
 }
