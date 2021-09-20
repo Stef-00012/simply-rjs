@@ -1,6 +1,5 @@
-module.exports = {
-  async function chatbot(options = {}) {
-    const fetch = require('node-fetch')
+const fetch = require('node-fetch')
+async function chatbot(options = {}) {
     if (!options.message) {
       throw new Error('Simply-rjs Error: message is a required parameter')
     }
@@ -170,4 +169,5 @@ module.exports = {
       console.log(`Simply-rjs Error: ${err.stack}`)
     }
   }
-}
+
+module.exports = chatbot;
