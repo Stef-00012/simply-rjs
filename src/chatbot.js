@@ -161,9 +161,7 @@ const fetch = require('node-fetch')
         fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${input}&age=${options.bot.age}&birthyear=${birthyear}&birthdate=${birthdate}&birthday=${birthday}&favoriteactor=${options.bot.favorites.actor}&favoriteactress=${options.bot.favorites.actress}$favoriteartist=${options.bot.favorites.artist}&favoriteauthor=${options.bot.favorites.author}&favoriteband=${options.bot.favorites.band}&favoritebook=${options.bot.favorites.book}&favoritecolor=${options.bot.favorites.color}&favoritefood=${options.bot.favorites.food}&favoritemovie=${options.bot.favorites.movie}&favoriteopera=${options.bot.favorites.opera}&favoriteseason=${options.bot.favorites.season}&favoriteshow=${options.bot.favorites.show}&favoritesong=${options.bot.favorites.song}&favoritesport=${options.bot.favorites.sport}&favoritesubject=${options.bot.favorites.subject}&gender=${options.bot.gender}&ownername=${options,bot.ownername}&botname=${options.bot.botname}`).then(res => res.json()).then(json => {
           let reply = json.message.replace('@here', '<here mention>').replace('@everyone', '<everyone mention>').replace(new RegExp('/<@([A-z0-9]{26})>/g'), '<user/role mention>')
           options.message.channel.sendMessage({ content: `${reply.toString()}` })
-        }) catch (err) {
-          options.message.channel.sendMessage({ content: `Error: ${err}` })
-        }
+        })
       }
     })
     } catch (err) {
