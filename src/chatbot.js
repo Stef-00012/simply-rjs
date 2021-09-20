@@ -148,7 +148,7 @@ const fetch = require('node-fetch')
     if (options.message.author.bot) return;
     try {
     options.channels.forEach(channel => {
-      if (!options.client.channels.get(channel._id)) {
+      if (!options.client.channels.get(channel)) {
         throw new TypeError('Simply-rjs Error: one of the given channel ids is not valid')
       }
       if (options.channels.includes(options.message.channel._id)) {
