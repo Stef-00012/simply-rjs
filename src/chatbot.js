@@ -1,5 +1,6 @@
 const fetch = require('node-fetch')
-async function chatbot(options = {}) {
+ module.exports = (options) {
+   if (typeof options !== 'object') return;
     if (!options.message) {
       throw new Error('Simply-rjs Error: message is a required parameter')
     }
