@@ -170,5 +170,3 @@ const fetch = require('node-fetch')
       console.log(`Simply-rjs Error: ${err.stack}`)
     }
   }
-
-module.exports = chatbot;
