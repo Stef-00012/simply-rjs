@@ -44,7 +44,7 @@ const fetch = require('node-fetch')
       options.bot.favorites = {}
     }
     if (!options.bot.favorites.actor) {
-      options.bot..favorites.actor = 'Tom Hanks';
+      options.bot.favorites.actor = 'Tom Hanks';
     }
     if (typeof options.bot.favorites.actor !== 'string') {
       throw new TypeError('Simply-rjs Error: bot favorite actor parameter must be a string')
