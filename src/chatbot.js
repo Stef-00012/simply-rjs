@@ -1,5 +1,5 @@
 const fetch = require('node-fetch')
- module.exports = (options) {
+ module.exports = async (options) => {
    if (typeof options !== 'object') return;
     if (!options.message) {
       throw new Error('Simply-rjs Error: message is a required parameter')
