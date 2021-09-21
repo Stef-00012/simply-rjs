@@ -1,5 +1,5 @@
 ### Functions
-• Chatbot
+#• Chatbot
 ```js
 client.on('message', async (message) => {
   const simplyrjs = require('simply-rjs')
