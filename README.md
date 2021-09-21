@@ -8,6 +8,11 @@ A node package made for `revolt.js`, go to the [Functions]() part for see all th
 npm i Stef-00012/simply-rjs
 ```
 
+## Requirements
+
+Node.js
+revolt.js
+
 # Functions
 
 ### • Chatbot
