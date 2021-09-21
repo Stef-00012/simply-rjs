@@ -1,5 +1,18 @@
-### Functions
-#• Chatbot
+# Description
+
+A node package made for `revolt.js`, go to the [Functions]() part for see all thr current features (it is still in developement so son't have alot function, in the future ii will add more :-))
+
+# Install
+
+```
+npm i Stef-00012/simply-rjs
+```
+
+# Functions
+
+### • Chatbot
+let the bot talks with the people into the specified channels
+
 ```js
 client.on('message', async (message) => {
   const simplyrjs = require('simply-rjs')
