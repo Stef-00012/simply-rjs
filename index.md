@@ -1,1 +1,1 @@
-these aare the docs of s0the simply-rjs npm
+these are the docs of the simply-rjs npm
