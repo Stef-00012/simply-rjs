@@ -6,11 +6,11 @@
 | message | Message | yes | Revolt.js message object |
 
 <!-- tabs:start -->
-#### ab
+#### **ab**
 
 test
 
-#### cd
+#### **cd**
 
 test2
 
