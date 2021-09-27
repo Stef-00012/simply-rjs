@@ -54,7 +54,8 @@ const simplyrjs = require('simply-rjs')
 simplyrjs.chatbot({
   client: client,
   message: message,
-  channels: ['ID1'] //ids into the array cam be unlimited
+  channels: ['ID1'], //ids into the array cam be unlimited
+  unknowncharactererror: 'Sorry, coukd you repeat?',
   bot: {
     age: '10',
     birthmonth: 'August',
