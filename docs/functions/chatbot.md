@@ -48,7 +48,7 @@ simplyrjs.chatbot({
 
 With optional options:
 
-```
+```js
 const simplyrjs = require('simply-rjs')
 
 simplyrjs.chatbot({
