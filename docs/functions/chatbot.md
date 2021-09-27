@@ -10,7 +10,8 @@
 
 #### **example**
 
-```js
+```
+test
 ```
 
 <!-- tabs:end -->
