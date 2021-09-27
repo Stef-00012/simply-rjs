@@ -15,3 +15,7 @@ test
 test2
 
 <!-- tabs:end -->
+
+```js
+const copy = require('code')
+```
