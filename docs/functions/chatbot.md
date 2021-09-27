@@ -7,7 +7,7 @@
 |-----------|------|----------|-------------|
 | client | [Client](https://revolt.js.org/classes/Client.Client-1.html) | ✓ | Revolt.js client |
 | message | [Message](https://revolt.js.org/classes/maps_Messages.Message.html) | ✓ | Revolt.js message object |
-| channels | Array<[ChannelId](https://revolt.js.org/classes/maps_Channels.Channel.html#_id)> | ✓ | Channels where bot will talk in |
+| channels | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[ChannelId](https://revolt.js.org/classes/maps_Channels.Channel.html#_id)> | ✓ | Channels where bot will talk in |
 | unknowncharactererror | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | X | Error to send if chatbot gets an unknown character |
 | bot | [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) | X | Bot informations |
 | bot > age | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | X | Age of the bot |
