@@ -16,5 +16,4 @@ npm install Stef-00012/simply-rjs
 ### [Chatbot](/functions/chatbot)
 ### [Documentation (here)](/)
 
-#### Need Help? Join the [support server](https://app.revolt.chat/invite/WhEc8dNY)!
-#### We love to help people. Join [the server](https://app.revolt.chat/invite/WhEc8dNY). Dont be shy.
+##### Need Help? Join the [support server](https://app.revolt.chat/invite/WhEc8dNY)!
