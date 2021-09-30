@@ -60,14 +60,21 @@
               'https://github.com/Stef-00012/simply-rjs/tree/site' +
               vm.route.file;
             var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n';
+            
+            var lastModifiedScript = [
+              '<script>',
+              'document.getElementById("updated").innerHTML.replace("docsify-updated}", new Date().toLocaleDateString())',
+              '\</script>'
+              ].join('')
 
             return (
               editHtml +
               '\n---\n'
               html +
               '\n----\n' +
-              'Last modified {docsify-updated}\n' +
-              editHtml
+              'Last modified <div id="updated">{docsify-updated}</div>\n' +
+              editHtml +
+              lastModifiedScript
             );
           });
         }
