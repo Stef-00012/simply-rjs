@@ -63,12 +63,9 @@
 
             return (
               editHtml +
-              '\n---\n'
               html +
               '\n----\n' +
-              'Last modified +' 
-              new Date().toLocaleDateString() +
-              '\n' +
+              'Last modified {docsify-updated}' +
               editHtml
             );
           });
