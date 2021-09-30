@@ -6,7 +6,7 @@
 
 <br />
 
-## How to install?
+## How to install? 
 
 ```
 npm install Stef-00012/simply-rjs
