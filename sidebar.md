@@ -1,12 +1,12 @@
 <!-- docs/sidebar.md -->
 
-# Home
+- Home
 
-  * [Home Page](/)
+  - [Home Page](/)
 
-# functions
+- functions
 
-  * [Chatbot](/functions/chatbot.md)
+  - [Chatbot](/functions/chatbot.md)
 
-# Support
-  * [Revolt Server](https://app.revolt.chat/invite/WhEc8dNY)
+- Support
+  - [Revolt Server](https://app.revolt.chat/invite/WhEc8dNY)
