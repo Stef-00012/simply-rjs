@@ -39,7 +39,38 @@
         paths: 'auto',
         placeholder: 'Type to search',
         noData: 'No results!'
-      }
+      },
+      plugins: [
+        function(hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span><a href="https://github.com/Stef-00012">Stef-00012</a> &copy;2017.</span>',
+            '<span>Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
+            '</footer>'
+          ].join('');
+
+          hook.afterEach(function(html) {
+            return html + footer;
+          });
+        },
+        function(hook, vm) {
+          hook.beforeEach(function(html) {
+            var url =
+              'https://github.com/Stef-00012/simply-rjs/tree/site' +
+              vm.route.file;
+            var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n';
+
+            return (
+              editHtml +
+              html +
+              '\n----\n' +
+              'Last modified {docsify-updated}\n' +
+              editHtml
+            );
+          });
+        }
+      ]
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
