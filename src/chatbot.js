@@ -14,7 +14,7 @@ const fetch = require('node-fetch')
       throw new Error('Simply-rjs Error: client is a required parameter')
     }
     if (options.client.constructor.name !== 'Client') {
-      throw new TypeError('Simply-rjs Error:vclient parameter must be a revolt.js client')
+      throw new TypeError('Simply-rjs Error: client parameter must be a revolt.js client')
     }
     if (!options.unknowncharactererror) {
       options.unknowncharactererror = 'Sorry, i didn\'t understood, could you repeat?';
