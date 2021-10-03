@@ -5,6 +5,7 @@
   "repository": "https://github.com/Stef-00012/simply-rjs",
   "author": "Stef",
   "license": "MIT",
+  "keywords": ["revolt", "chatbot", "simply-rjs", "revolt.js", "simplyrjs"],
   "dependencies": {
     "revolt.js": "^5.1.0-alpha.4",
     "node-fetch": "^2.6.1"
