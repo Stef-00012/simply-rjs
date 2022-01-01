@@ -1,11 +1,11 @@
 # Description
 
-A node package made for `revolt.js`, go to the [Functions](https://github.com/Stef-00012/simply-rjs#functions) part for see all thr current features (it is still in developement so son't have alot function, in the future ii will add more :-))
+A node package for `revolt.js` made from [Stef#6705](https://discord.com/users/694986201739952229)/[Stef](https://app.revolt.chat/@01FEY7JBN0B1VG5D98BEBAE7KA), go to the [Functions](https://github.com/Stef-00012/simply-rjs#functions) part for see all the current features (it is still in developement so don't have alot function, in the future i will add more :-))
 
 # Install
 
 ```
-npm i Stef-00012/simply-rjs
+npm i simply-rjs
 ```
 
 ## Requirements
@@ -18,9 +18,9 @@ Node.js<br />revolt.js
 let the bot talks with the people into the specified channels
 
 ```js
+import { Chatbot } from 'symply-rjs';
 client.on('message', async (message) => {
-  const simplyrjs = require('simply-rjs')
-  simplyrjs.chatbot({
+  Chatbot({
     client: client, //revolt.js client [required]
     message: message, //message object [required]
     channels: ['01FEY83CT3VFG9YCR3JVGPJHPH'], //channels where the chatbot is enabled (channels ids) [required]
