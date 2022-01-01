@@ -38,9 +38,9 @@
 Without optional options:
 
 ```js
-const simplyrjs = require('simply-rjs')
+import  { Chatbot } from 'simply-rjs'
 
-simplyrjs.chatbot({
+Chatbot({
   client: client,
   message: message,
   channels: ['ID1'] //ids into the array cam be unlimited
@@ -50,15 +50,15 @@ simplyrjs.chatbot({
 With optional options:
 
 ```js
-const simplyrjs = require('simply-rjs')
+import { Chatbot } from 'simply-rjs
 
-simplyrjs.chatbot({
+Chatbot({
   client: client,
   message: message,
   channels: ['ID1'], //ids into the array cam be unlimited
-  unknowncharactererror: 'Sorry, coukd you repeat?',
+  unknowncharactererror: 'Sorry, could you repeat?',
   bot: {
-    age: '10',
+    age: '16',
     birthmonth: 'August',
     birthdaynum: '28',
     gender: 'Male',
